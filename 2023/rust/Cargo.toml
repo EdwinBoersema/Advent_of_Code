@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+
+members = ["day_*"]
+
+[workspace.dependencies]
+tracing = "0.1.40"
+rstest = "0.18.2"
+rstest_reuse = "0.6.0"
