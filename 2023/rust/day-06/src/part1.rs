@@ -1,5 +1,24 @@
-pub fn process(_input: &str) -> String {
-    todo!("Solve part 1 of the problem");
+use crate::utility::*;
+
+pub fn process(input: &str) -> u64 {
+    /*
+    input:
+        Time:      7  15   30
+        Distance:  9  40  200
+    
+    hold button down > release
+    time = pressing button + boat traveling
+
+    starting speed = 0 millimeters / millisecond
+    1 millisecond pressing button = +1 millimeter / millisecond
+    check what configurations beat the current record > count
+
+    multiply all counts > return val
+    */
+    let mut input_iter = input.lines();
+    let races: Vec<Race> = get_races(&mut input_iter);
+
+    get_score(races)
 }
 
 #[cfg(test)]
@@ -8,8 +27,7 @@ mod test {
 
     #[test]
     fn test_process() {
-        todo!("Haven't built the test yet");
-        let input = "";
-        assert_eq!("", process(input));
+        let input = include_str!("../test.txt");
+        assert_eq!(288, process(input));
     }
 }

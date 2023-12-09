@@ -1,5 +1,10 @@
-pub fn process(_input: &str) -> String {
-    todo!("Solve part 2 of the problem");
+use crate::utility::get_race;
+
+pub fn process(input: &str) -> u64 {
+    let mut lines = input.lines();
+    let race = get_race(&mut lines);
+
+    race.solve()
 }
 
 #[cfg(test)]
@@ -8,8 +13,7 @@ mod test {
 
     #[test]
     fn test_process() {
-        todo!("Haven't built the test yet");
-        let input = "";
-        assert_eq!("", process(input));
+        let input = include_str!("../test.txt");
+        assert_eq!(71503, process(input));
     }
 }
