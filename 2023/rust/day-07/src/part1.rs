@@ -1,5 +1,11 @@
-pub fn process(_input: &str) -> String {
-    todo!("Solve part 1 of the problem");
+pub fn process(_input: &str) -> u32 {
+    /* 
+        Camel Cards
+    > list of hands
+    > order them based on the strength
+    > 
+    */
+    0
 }
 
 #[cfg(test)]
@@ -8,8 +14,7 @@ mod test {
 
     #[test]
     fn test_process() {
-        todo!("Haven't built the test yet");
-        let input = "";
-        assert_eq!("", process(input));
+        let input = include_str!("../test.txt");
+        assert_eq!(6440, process(input));
     }
 }

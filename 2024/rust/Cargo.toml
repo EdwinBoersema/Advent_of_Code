@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+
+members = ["day-*"]
+exclude = ["template"]
+
+[workspace.dependencies]
+clippy = "0.0.302"
+itertools = "0.13.0"
+rstest = "0.23.0"
+rstest_reuse = "0.7.0"
